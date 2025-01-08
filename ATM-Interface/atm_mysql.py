@@ -200,7 +200,7 @@ class WithdrawPage(tk.Frame):
                 messagebox.showinfo('TRANSACTION','Done Successfully!')
                 other_amount_entry.delete(0,END)
                 controller.shared_data['Balance'].set(current_balance)
-                mydb=mysql.connector.connect(host="localhost",port="3300",user="root",password="9057674771@Sn")
+                mydb=mysql.connector.connect(host="localhost",port="###",user="your user",password="enter your password")
                 mycursor=mydb.cursor()
                 mycursor.execute("use payrealx")
                 mycursor.execute(f"update payrealbank set balance ={current_balance} where accid = {username1} ")
@@ -256,7 +256,7 @@ class WithdrawPage(tk.Frame):
                     cash.set('')
                     messagebox.showinfo('TRANSACTION','Done Successfully!')
                     controller.show_frame('MenuPage')
-                    mydb=mysql.connector.connect(host="localhost",port="3300",user="root",password="9057674771@Sn")
+                    mydb=mysql.connector.connect(host="localhost",port="###",user="your user",password="enter your password")
                     mycursor=mydb.cursor()
                     mycursor.execute("use payrealx")
                     mycursor.execute(f"update payrealbank set balance ={current_balance} where accid = {username1} ")
@@ -298,7 +298,7 @@ class DepositPage(tk.Frame):
                     controller.shared_data['Balance'].set(current_balance)
                     controller.show_frame('MenuPage')
                     cash.set('')
-                    mydb=mysql.connector.connect(host="localhost",port="3300",user="root",password="9057674771@Sn")
+                    mydb=mysql.connector.connect(host="localhost",port="###",user="your user",password="enter your password")
                     mycursor=mydb.cursor()
                     mycursor.execute("use payrealx")
                     mycursor.execute(f"update payrealbank set balance ={current_balance} where accid = {username1} ")
@@ -372,7 +372,7 @@ class InfoPage(tk.Frame):
         button_frame=tk.Frame(self,bg='#33334d')
         button_frame.pack(fill='both')
 
-        mydb=mysql.connector.connect(host="localhost",port="3300",user="root",password="9057674771@Sn")
+        mydb=mysql.connector.connect(host="localhost",port="###",user="your user",password="enter your password")
         mycursor=mydb.cursor()
         mycursor.execute("create database if not exists payrealx")
         mycursor.execute("use payrealx")
@@ -434,7 +434,7 @@ def register_user():
 
   ################## MYSQL DATABASE ##################
   global mycursor
-  mydb=mysql.connector.connect(host="localhost",port="3300",user="root",password="9057674771@Sn")
+  mydb=mysql.connector.connect(host="localhost",port="###",user="your user",password="enter your password")
   mycursor=mydb.cursor()
   mycursor.execute("create database if not exists payrealx")
   mycursor.execute("use payrealx")
@@ -478,7 +478,7 @@ def login_verify():
   username_entry1.delete(0, END)
   password_entry1.delete(0, END)
 
-  mydb=mysql.connector.connect(host="localhost",port="3300",user="root",password="9057674771@Sn")
+  mydb=mysql.connector.connect(host="localhost",port="###",user="your user",password="enter your password")
   mycursor=mydb.cursor()
   #mycursor.execute("create database if not exists payrealx")
   mycursor.execute("use payrealx")
@@ -527,7 +527,7 @@ def login_verify():
                     user_name.append(i[0])
                   user_display_name=str(user_name[0])
                   #login_sucess()
-                  mydb=mysql.connector.connect(host="localhost",port="3300",user="root",password="9057674771@Sn")
+                  mydb=mysql.connector.connect(host="localhost",port="###",user="your user",password="enter your password")
                   mycursor=mydb.cursor()
                   #mycursor.execute("create database if not exists payrealx")
                   mycursor.execute("use payrealx")
